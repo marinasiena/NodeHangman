@@ -1,4 +1,4 @@
-var inquirer = require("inquirer");
+var inquirer = require('inquirer');
 var switchWord = require('./game.js');
 var checkWord = require('./word.js');
 
@@ -9,7 +9,6 @@ var playGame = function() {
 	lives = 10;
 	var word = new switchWord();
 	randomWord = word.wordSelect;
-	console.log();
 	console.log("~*~*~*~*~*~*~");
 	console.log("Words I Hate Hangman");
 	console.log("*~*~*~*~*~*~*");
@@ -27,16 +26,16 @@ var replay = function() {
 		} else {
 			console.log("\nYou actually got it right.. Thanks, but no thanks. Yuck.\n");
 		}
-		inquirer.prompt({{
+		inquirer.prompt({
 			type: "confirm",
-			name: "replay"
+			name: "replay",
 			message: "Wanna replay?"
-		}}).then(function(restart) {
+		}).then(function(restart) {
 			if (restart.again) {
 				console.log("That's finger licking good!");
 				playGame();
 			} else {
-				console.log("\nI'd run, too."\n);
+				console.log("\nI'd run, too.");
 			}
 		});
 	}
@@ -44,7 +43,7 @@ var replay = function() {
 
 var userPrompt = function() {
 	currentWord.wordFound();
-	if (tries = 0 || found) {
+	if (tries = 0 || correct) {
 		gameover = true;
 		replay();
 	} else {
