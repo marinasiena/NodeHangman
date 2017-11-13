@@ -1,0 +1,10 @@
+{
+  "name": "NodeHangman",
+  "version": "1.0.0",
+  "description": "creating hangman node js",
+  "author": "Marina Hyers",
+  "main": "main.js",
+  "devDependencies": {
+    "inquirer": "^4.0.0"
+  }
+}
